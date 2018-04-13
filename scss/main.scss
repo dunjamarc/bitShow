@@ -1,0 +1,73 @@
+$main-color: rgb(87, 85, 85);
+$heading-margin: 20px 0;
+
+@mixin header-style {
+    background-color: $main-color;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 70%;
+}
+
+header {
+    @include header-style;
+    padding: 10px;
+    span {
+        font-size: 20px;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        float: right;
+        input {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            min-width: 200px;
+        }
+    }
+}
+
+footer {
+    @include header-style;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin: $heading-margin;
+}
+
+h3 {
+    margin: $heading-margin;
+}
+
+#myDropdown.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    a {
+        color: black;
+        padding: 3px 0 5px;
+        margin: 0 10px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+    a:nth-of-type(10) {
+        border: none;
+    }
+}
+
+#myDropdown.show {display:block;}
